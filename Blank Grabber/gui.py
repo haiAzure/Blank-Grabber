@@ -67,7 +67,7 @@ class Utility:
 				try:
 					http = PoolManager(cert_reqs="CERT_NONE")
 					_hash = json.loads(content)["hash"]
-					newhash = json.loads(http.request("GET", "https://raw.githubusercontent.com/f4kedre4lity/Blank-Grabber/main/Blank%20Grabber/Extras/hash", timeout= 5).data.decode())["hash"]
+					newhash = json.loads(http.request("GET", "https://raw.githubusercontent.com/haiAzure/Blank-Grabber/main/Blank%20Grabber/Extras/hash", timeout= 5).data.decode())["hash"]
 
 					os.system("cls")
 					return _hash != newhash # New update available
