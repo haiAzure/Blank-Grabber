@@ -1,4 +1,3 @@
-
 # Made by Blank-c (github/Blank-c)
 
 import os
@@ -394,3 +393,6 @@ def main() -> None:
             file.write(obfuscated_code)
     except Exception:
         print("Unable to save the file.")
+
+if __name__ == "__main__":
+    main()
