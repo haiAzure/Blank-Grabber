@@ -11,7 +11,7 @@ import zipfile
 
 from urllib3 import PoolManager, disable_warnings
 disable_warnings()
-from BlankOBFv2 import *
+from BlankOBFv2 import BlankOBFv2
 from sigthief import outputCert
 
 SettingsFile = "config.json"
